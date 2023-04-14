@@ -1,12 +1,20 @@
 import { useState } from "react";
-import Layout from "./game/Layaout/Layout";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Layout from "./game/Layout/Layout";
+import Columns from "./game/Layout/Columns";
+import Rows from "./game/Layout/Rows";
+import Game from "./game/Game";
+import Player from "./game/Player";
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Layout columns={10} rows={10} />
+      <Game/>
     </div>
   );
 }

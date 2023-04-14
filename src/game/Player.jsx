@@ -1,22 +1,9 @@
 import React from 'react';
 
-class Player extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      someKey: 'someValue'
-    };
+class Player {
+  constructor(color) {
+    this.color = color;
     
-  }
-
-  render() {
-    return <p>{this.state.someKey}</p>;
-  }
-
-  componentDidMount() {
-    this.setState({
-      someKey: 'otherValue'
-    });
   }
 }
 

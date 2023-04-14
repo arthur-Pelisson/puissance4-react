@@ -1,16 +1,19 @@
-import React from "react";
+import React from 'react';
 
 class Rows extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      rows: []
+    };
   }
 
   render() {
-    return <p>{this.state.someKey}</p>;
+    return <div></div>;
   }
 
   componentDidMount() {
-    console.log(props);
+    
   }
 }
 
