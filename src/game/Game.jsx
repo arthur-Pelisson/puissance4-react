@@ -38,7 +38,10 @@ class Game extends React.Component {
 
   checkWin() {
     if (this.checkHorizontal() || this.checkVertical() || this.checkDiagonal()) {
-      this.win();
+      //delay the win to let the UI end
+      setTimeout(() => {
+        this.win()
+      }, 400);
     }
   }
 
@@ -65,7 +68,6 @@ class Game extends React.Component {
           color = column.style.backgroundColor;
         }
         if (count == 4) {
-          console.log("Horizontal win");
           return true;
         }
       }
@@ -86,7 +88,6 @@ class Game extends React.Component {
           color = column.style.backgroundColor;
         }
         if (count == 4) {
-          console.log("Vertical win");
           return true;
         }
       }
@@ -129,7 +130,6 @@ class Game extends React.Component {
       }
     }
     if (count == 4) {
-      console.log("Diagonal left win");
       return true;
     }
   }
